@@ -6,7 +6,7 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: flex-start;
             }
             .in{
                 width: 33%;
@@ -28,14 +28,28 @@
         <div name="in" class="in">
             <img src="./imgs/sanli.jpg">
         </div>
+        <div name="in" class="in">
+            <img src="./imgs/sanli.jpg">
+        </div>
+        <div name="in" class="in">
+            <img src="./imgs/sanli.jpg">
+        </div>
+        <div name="in" class="in">
+            <img src="./imgs/sanli.jpg">
+        </div>
+        <div name="in" class="in">
+            <img src="./imgs/sanli.jpg">
+        </div>
     </div>
 </body>
 <script type="text/javascript">
     if (window.screen.width < 500){
-        var inElementStyle=document.getElementsByName("in")[0].style;
-        console.log(inElementStyle)
-        inElementStyle.width="100%";
-        inElementStyle.height="500px";
+        var inElements=document.getElementsByName("in")
+        inElements.forEach(element => {
+            element.style.width="100%";
+            element.style.height="500px";
+        });
+        
     }
 </script>
     </html>
