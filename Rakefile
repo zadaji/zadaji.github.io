@@ -8,14 +8,14 @@ CONFIG = {
 }
 PICMD_PREFIX = <<-EOS
 ---
-layout: home
+layout: post
 title: \"图片帖\"
 date: 2024-8-25 
 categories: jekyll pics
 ---
 EOS
 
-PICMD_PATH = "./_posts/0-0-0-pic.md"
+PICMD_PATH = "./_posts/2025-8-25-pic.md"
 
 # Usage: rake post title="A Title"
 desc "Begin a new post in #{CONFIG['posts']}"
