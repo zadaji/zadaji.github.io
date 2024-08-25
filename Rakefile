@@ -15,7 +15,7 @@ categories: jekyll pics
 ---
 EOS
 
-PICMD_PATH = "./_posts/2100-1-1-pic.md"
+PICMD_PATH = "./_posts/0-0-0-pic.md"
 
 # Usage: rake post title="A Title"
 desc "Begin a new post in #{CONFIG['posts']}"
