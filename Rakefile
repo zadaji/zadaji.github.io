@@ -6,6 +6,16 @@ CONFIG = {
   'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "md",
 }
+PICMD_PREFIX = <<-EOS
+---
+layout: home
+title: \"图片帖\"
+date: 2024-8-25 
+categories: jekyll pics
+---
+EOS
+
+PICMD_PATH = "./_posts/2100-1-1-pic.md"
 
 # Usage: rake post title="A Title"
 desc "Begin a new post in #{CONFIG['posts']}"
@@ -28,3 +38,16 @@ task :post do
     post.puts "---"
   end
 end # task :post
+
+task :pushimg do
+  puts "push all imgs."
+  files = Dir.glob("./image/*.{png,jpg,jpeg}")
+  toMD = PICMD_PREFIX
+  files.each do |file|
+    toMD = toMD + "![](" + file[1..] + ")\n"
+  end
+  File.open(PICMD_PATH, "w") do |f|
+    f.write(toMD)
+  end
+  puts "success."
+end
