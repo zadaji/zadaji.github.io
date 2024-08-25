@@ -1,5 +1,5 @@
 ---
-layout: uuu
+layout: home
 title: "图片帖"
 date: 2024-8-25
 categories: jekyll pics
