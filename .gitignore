@@ -6,6 +6,4 @@ vendor
 ./Gemfile
 ./Gemfile.lock
 ./Rakefile
-./index.markdown
-./about.markdown
 ./404.html
